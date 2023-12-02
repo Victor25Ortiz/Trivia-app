@@ -1,4 +1,15 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref } from 'vue'
+import useAPI from '@/composables/useAPI'
+
+const api = useAPI()
+const categories = ref([])
+
+onMounted(async () => {
+  categories.value = await api.getCategories()
+})
+</script>
+
 
 <template>
   <div class="brand">

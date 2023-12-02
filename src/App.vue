@@ -6,6 +6,7 @@
         <RouterView />
         </div>
     </main>
+    <p class="score">Score: 100</p>
 </template>
 
 <style lang="postcss" scoped>
